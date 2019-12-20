@@ -5,6 +5,7 @@ using System.Web;
 
 namespace E_Recarga.Models
 {
+    //treta
     public static class RoleName
     {
         public const string CanManagePostos = "CanManagePostos";
