@@ -1,0 +1,31 @@
+﻿@model IEnumerable<E_Recarga.Models.Posto>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Postos</h2>
+<p>
+    @Html.ActionLink("Novo Posto", "New", "Postos", null, new { @class = "btn btn-primary" })
+</p>
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+    <tr>
+        <td>Posto</td>
+        <td>Estação</td>
+        <td> </td>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var posto in Model)
+    {
+        <tr>
+            <td>@Html.ActionLink(posto.Name,"Details","Postos",new {id = posto.Id},null)</td>
+            <td>@posto.Estacao.Name</td>
+            <td>@Html.ActionLink("Editar","Edit","Postos",new {id = posto.Id},null) | @Html.ActionLink("Remover","Delete", new {id = posto.Id})</td>
+        </tr>
+    }
+    </tbody>
+</table>

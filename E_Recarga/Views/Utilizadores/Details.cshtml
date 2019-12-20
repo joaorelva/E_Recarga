@@ -1,0 +1,16 @@
+﻿@model IEnumerable<E_Recarga.ViewModels.UsersWithRoles>
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<h2>Detalhes</h2>
+    
+<div>
+    @foreach (var user in Model)
+    {
+        @user.UserName
+        @user.Saldo
+    }
+</div>

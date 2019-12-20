@@ -1,0 +1,39 @@
+﻿@model E_Recarga.ViewModels.PostoFormViewModel
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Novo Posto</h2>
+
+@using (Html.BeginForm("Save", "Postos"))
+{
+    @*@Html.ValidationSummary(true, "Please fix the following errors.")*@
+    <div class="form-group">
+        @Html.LabelFor(m => m.Posto.Name)
+        @Html.TextBoxFor(m => m.Posto.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Posto.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Posto.Price)
+        @Html.TextBoxFor(m => m.Posto.Price, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Posto.Price)
+    </div>    
+    <div class="form-group">
+        @Html.LabelFor(m => m.Posto.Location)
+        @Html.TextBoxFor(m => m.Posto.Location, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Posto.Location)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Posto.EstacaoId)
+        @Html.DropDownListFor(m => m.Posto.EstacaoId, new SelectList(Model.Estacaos,"Id","Name"), "Seleciona a Estação",new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Posto.Estacao.Name)
+    </div>
+     @Html.HiddenFor(m => m.Posto.Id)
+    <button type="submit" class="btn btn-primary">Save</button>    
+}
+
+<br/>
+<div>
+    @Html.ActionLink("Voltar atrás","Index")
+</div>

@@ -1,0 +1,46 @@
+﻿@model E_Recarga.ViewModels.PostoFormViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Informações sobre o posto @Model.Posto.Name</h2>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Posto.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posto.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Posto.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posto.Price)€/1 hora
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Posto.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posto.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Posto.Estacao.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Posto.Estacao.Name)
+        </dd>
+
+    </dl>
+
+    <div>
+            @Html.ActionLink("Voltar atrás", "Index")
+    </div>
+</div>
