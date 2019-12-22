@@ -12,13 +12,12 @@ namespace E_Recarga.Models
 
         public int UtilizadorId { get; set; }
 
-        public int Custo { get; set; }
+        public float Custo { get; set; }
 
         public Posto Posto { get; set; }
 
         [Display(Name = "Postos")]
         public byte PostoId { get; set; }
 
-        //public int 
     }
 }

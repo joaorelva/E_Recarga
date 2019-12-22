@@ -36,13 +36,25 @@ namespace E_Recarga.Controllers
          [HttpPost]
          public ActionResult Save(Reserva reserva)
          {
+             var postos = _context.Postoes.ToList();
+             var viewModel = new NewReservaViewModel
+             {
+                 Postos = postos
+             };
+
              if (reserva.Id == 0)
                  _context.Reservas.Add(reserva);
              else
              {
                  var reservaInDb = _context.Reservas.Single(c => c.Id == reserva.Id);
                  reservaInDb.PostoId = reserva.PostoId;
-                 reservaInDb.Custo = reserva.Custo;
+                 foreach (var p in viewModel.Postos)
+                 {
+                     if (p.Id == reservaInDb.PostoId)
+                        reservaInDb.Custo = p.Price;
+                 }
+
+
              }
 
              _context.SaveChanges();
