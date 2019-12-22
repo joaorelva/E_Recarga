@@ -173,6 +173,7 @@
     <Compile Include="Controllers\InitAdminController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PostosController.cs" />
+    <Compile Include="Controllers\ReservasController.cs" />
     <Compile Include="Controllers\RolesAdminController.cs" />
     <Compile Include="Controllers\UsersAdminController.cs" />
     <Compile Include="Controllers\UtilizadoresController.cs" />
@@ -231,15 +232,41 @@
     <Compile Include="Migrations\201912111305133_OriginalUserWithRoles.Designer.cs">
       <DependentUpon>201912111305133_OriginalUserWithRoles.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912221603516_AddReserva.cs" />
+    <Compile Include="Migrations\201912221603516_AddReserva.Designer.cs">
+      <DependentUpon>201912221603516_AddReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912221608404_UpdateReserva.cs" />
+    <Compile Include="Migrations\201912221608404_UpdateReserva.Designer.cs">
+      <DependentUpon>201912221608404_UpdateReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912221611382_UpdateReserva1.cs" />
+    <Compile Include="Migrations\201912221611382_UpdateReserva1.Designer.cs">
+      <DependentUpon>201912221611382_UpdateReserva1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912221613180_UpdateReserva2.cs" />
+    <Compile Include="Migrations\201912221613180_UpdateReserva2.Designer.cs">
+      <DependentUpon>201912221613180_UpdateReserva2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912221614119_updatereserva3.cs" />
+    <Compile Include="Migrations\201912221614119_updatereserva3.Designer.cs">
+      <DependentUpon>201912221614119_updatereserva3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912221617281_updateposto.cs" />
+    <Compile Include="Migrations\201912221617281_updateposto.Designer.cs">
+      <DependentUpon>201912221617281_updateposto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Estacao.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Posto.cs" />
+    <Compile Include="Models\Reserva.cs" />
     <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\NewReservaViewModel.cs" />
     <Compile Include="ViewModels\PostoFormViewModel.cs" />
     <Compile Include="ViewModels\UsersWithRoles.cs" />
   </ItemGroup>
@@ -321,6 +348,7 @@
     <Content Include="Views\InitAdmin\Success.cshtml" />
     <Content Include="Views\InitAdmin\Index.cshtml" />
     <Content Include="Views\InitAdmin\Error.cshtml" />
+    <Content Include="Views\Reservas\New.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -377,6 +405,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201912111305133_OriginalUserWithRoles.resx">
       <DependentUpon>201912111305133_OriginalUserWithRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221603516_AddReserva.resx">
+      <DependentUpon>201912221603516_AddReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221608404_UpdateReserva.resx">
+      <DependentUpon>201912221608404_UpdateReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221611382_UpdateReserva1.resx">
+      <DependentUpon>201912221611382_UpdateReserva1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221613180_UpdateReserva2.resx">
+      <DependentUpon>201912221613180_UpdateReserva2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221614119_updatereserva3.resx">
+      <DependentUpon>201912221614119_updatereserva3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912221617281_updateposto.resx">
+      <DependentUpon>201912221617281_updateposto.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

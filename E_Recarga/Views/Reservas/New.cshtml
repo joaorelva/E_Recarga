@@ -1,0 +1,17 @@
+﻿@model E_Recarga.ViewModels.NewReservaViewModel
+
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Nova Reserva</h2>
+
+@using (Html.BeginForm("Save", "Reservas"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Reserva.PostoId)
+        @Html.DropDownListFor(m => m.Reserva.PostoId, new SelectList(Model.Postos, "Id", "Name"), "Seleciona o posto", new {@class = "form-control"})
+    </div>
+    @Html.HiddenFor(m => m.Reserva.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}

@@ -26,6 +26,7 @@ namespace E_Recarga.Models
     {
         public DbSet<Posto> Postoes { get; set; }
         public DbSet<Estacao> Estacaos { get; set; }
+        public DbSet<Reserva> Reservas { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
