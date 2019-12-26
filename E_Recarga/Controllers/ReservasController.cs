@@ -48,6 +48,7 @@ namespace E_Recarga.Controllers
              {
                  var reservaInDb = _context.Reservas.Single(c => c.Id == reserva.Id);
                  reservaInDb.PostoId = reserva.PostoId;
+                 //nao faz nada
                  foreach (var p in viewModel.Postos)
                  {
                      if (p.Id == reservaInDb.PostoId)
